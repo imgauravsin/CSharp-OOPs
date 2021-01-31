@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exersice_2
+{
+    class Program
+    {
+        public static void Main(string[] args)
+    {
+        string Name1 = "Gaurav";
+        string Name2 = "Gaurav";
+        string Name3 = "Gauravsingh".Substring(0, 6);
+        object Name4 = Name3;
+
+        // Comparison using "==" operator, "object.Equals" method and object.ReferenceEquals method
+        Console.WriteLine("Comparing using == operator");
+        if (Name1 == Name2)
+            Console.WriteLine("Name1 equals to Name2");
+        if (Name1 == Name3)
+            Console.WriteLine("Name1 equals to Name3");
+        if (Name1 == Name4)
+            Console.WriteLine("Name1 equals to Name4");
+
+        Console.WriteLine("Comparing using object.Equals Method");
+        if (Name1.Equals(Name2))
+            Console.WriteLine("Name1 equals to Name2");
+        if (Name1.Equals(Name3))
+            Console.WriteLine("Name1 equals to Name2");
+        if (Name1.Equals(Name4))
+            Console.WriteLine("Name1 equals to Name4");
+
+        Console.WriteLine("Comparing using object.ReferenceEquals Method");
+        if (object.ReferenceEquals(Name1, Name2))
+            Console.WriteLine("Name1 equals to Name2");
+        if (object.ReferenceEquals(Name1, Name3))
+            Console.WriteLine("Name1 equals to Name3");
+        if (object.ReferenceEquals(Name1, Name4))
+            Console.WriteLine("Name1 equals to Name4");
+
+        Console.ReadLine();
+    }
+}
+}
