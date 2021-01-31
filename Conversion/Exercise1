@@ -1,0 +1,139 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercise_1
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            ConvertToInteger();
+            ConvertToFloat();
+            ConvertToBoolean();
+            Console.ReadLine();
+        }
+
+        public static void ConvertToInteger()
+        {
+            Console.WriteLine("Please Enter the input to convert it into Integer");
+            string input = Console.ReadLine();
+            try
+            {
+                Console.WriteLine("Conversion using int.Parse method :");
+                int Number1 = int.Parse(input);
+                Console.WriteLine(Number1);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input ");
+            }
+
+            try
+            {
+                Console.WriteLine("Conversion using Convert.ToInt method :");
+                int Number2 = Convert.ToInt32(input);
+                Console.WriteLine(Number2);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input");
+            }
+
+            Console.WriteLine("Conversion using int.TryParse method :");
+            int Number3;
+            bool result = int.TryParse(input, out Number3);
+            if (result)
+            {
+                Console.WriteLine(Number3);
+            }
+            else
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input");
+            }
+        }
+
+        public static void ConvertToFloat()
+        {
+            Console.WriteLine("Please enter the input to convert it into Float");
+            string input = Console.ReadLine();
+
+            try
+            {
+                Console.WriteLine("Conversion using float.Parse method :");
+                float Number1 = float.Parse(input);
+                Console.WriteLine(Number1);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input");
+            }
+
+            try
+            {
+                Console.WriteLine("Conversion using Single.Parse method :");
+                float Number2 = Single.Parse(input);
+                Console.WriteLine(Number2);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input");
+            }
+
+            try
+            {
+                Console.WriteLine("Conversion using Convert.ToSingle method :");
+                float Number3 = Convert.ToSingle(input);
+                Console.WriteLine(Number3);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input");
+            }
+        }
+
+        public static void ConvertToBoolean()
+        {
+            Console.WriteLine("Please enter the input to convert it into Boolean");
+            string input = Console.ReadLine();
+
+            try
+            {
+                Console.WriteLine("Conversion using bool.Parse method :");
+                bool Value1;
+                Value1 = bool.Parse(input);
+                Console.WriteLine(Value1);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input");
+            }
+
+            try
+            {
+                Console.WriteLine("Conversion using bool.TryParse method :");
+                bool Result;
+                bool Value2;
+                Value2 = Boolean.TryParse(input, out Result);
+                Console.WriteLine(Value2);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input ");
+            }
+
+            try
+            {
+                Console.WriteLine("Conversion using Convert.ToBoolean method :");
+                bool Value3 = Convert.ToBoolean(input);
+                Console.WriteLine(Value3);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Incorrect input : Please type Valid Input ");
+            }
+        }
+    }
+}
