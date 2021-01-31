@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercise_3
+{
+    class Program
+    {
+        static void prime(int a, int b)
+        {
+            bool flag;
+            int i;
+            while (a < b)
+            {
+                flag = false;
+                for (i = 2; i <= a / 2; ++i)
+                {
+                    if (a % i == 0)
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag == false)
+                    Console.WriteLine(a);
+                ++a;
+            }
+
+        }
+
+
+
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.WriteLine("Enter the lower bound Number : ");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the lower Upper Number : ");
+                int b = Convert.ToInt32(Console.ReadLine());
+                if (a>=1 && b>=1 && a<1000 && b<1000 && a<b && (a >= 2 && b <= 1000) )
+                {
+                    Console.WriteLine($"The Prime Number Between {a} and {b} is : ");
+                    prime(a, b);
+                    Console.ReadLine();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\t\t -------------------------------------------------------------");
+                    Console.WriteLine("\t\t|    Please  Type Valid Input in range 2 to 1000              |");
+                    Console.WriteLine("\t\t -------------------------------------------------------------");
+                    continue;
+                }
+
+
+            }
+
+        }
+    }
+}
