@@ -1,0 +1,2 @@
+#### Exercise 1: In this exercise, you’ll implement a generic PriorityQueue<T> class that is parameterized by the type of object it contains. The priority queue will be used as a container of objects of type T. Implement Priority Queue in the following three ways
+Create a small console application which provides a demo of various operations and its effect on the PriorityQueue object. There is no need for the application to be user interactive.
